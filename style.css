@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+     --clr-Desaturated-Red: hsl(0, 36%, 70%);
+     --clr-Soft-Red: hsl(0, 93%, 68%);
+
+     --clr-Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+img {
+    max-width: 100%;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+.logo {
+    padding: 1.5rem 0 0 1.5rem;
+}
+main {
+    display: flex;
+    flex-direction: column-reverse;
+}
+main h1 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--clr-Dark-Grayish-Red);
+    font-size: 4rem;
+    margin-top: 2rem;
+}
+main h1 span {
+    color: var(--clr-Desaturated-Red);
+    font-weight: 300;
+}
+main article:first-child {
+    text-align: center;
+    padding: 0 1.5rem 2rem;
+}
+main article:first-child p {
+    color: var(--clr-Desaturated-Red);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+main article .logo {
+    display: none;
+}
+main article picture img {
+    width: 100%;
+    margin: 2rem 0;
+}
+form {
+    position: relative;
+}
+form input {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--clr-Dark-Grayish-Red);
+    border-radius: 30px;
+    width: 100%;
+    margin: 2rem 0 0;
+    color: var(--clr-Dark-Grayish-Red);
+    font-family: inherit;
+}
+form label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5rem;
+    display: none;
+}
+form button {
+    position: absolute;
+    top: 37%;
+   
+    right: -0.5rem;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 30px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+form button:hover {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+
+}
+form input::placeholder {
+    color: var(--clr-Dark-Grayish-Red);
+}
+.error {
+    color:var(--clr-Soft-Red) !important;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    display: none;
+}
+@media (min-width: 768px){
+    body {
+        background: url("images/bg-pattern-desktop.svg") no-repeat center/cover;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+ 
+    .logo {
+        position:absolute;
+        left: 10vw;
+        top: 2vw;
+       
+    }
+    main article:first-child {
+        text-align: left;
+        margin-left: 10vw;
+        max-width: 500px;
+    }
+    main article picture img {
+        margin: 0;
+        height: 100vh;
+    }
+    main h1 {
+        font-size: 6rem
+    }
+    main p {
+        font-size: 1.5rem;
+    }
+    .landingPage {
+        height: 100vh;
+    }
+}
